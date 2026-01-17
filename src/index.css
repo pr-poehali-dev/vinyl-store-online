@@ -4,35 +4,40 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 35 25% 95%;
+    --foreground: 25 40% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 35 30% 92%;
+    --card-foreground: 25 40% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 30% 92%;
+    --popover-foreground: 25 40% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 60% 45%;
+    --primary-foreground: 35 25% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 43 90% 60%;
+    --secondary-foreground: 25 40% 10%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 85%;
+    --muted-foreground: 25 20% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 43 90% 60%;
+    --accent-foreground: 25 40% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 35 25% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 15% 75%;
+    --input: 35 15% 75%;
+    --ring: 43 90% 60%;
 
     --radius: 0.5rem;
+
+    --vinyl-brown: 25 60% 45%;
+    --vinyl-sand: 35 70% 70%;
+    --vinyl-gold: 43 90% 60%;
+    --vinyl-dark: 25 40% 10%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -98,4 +103,38 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap");
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oswald", sans-serif;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@keyframes spin-vinyl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-spin {
+  animation: spin-vinyl 3s linear infinite;
+}
+
+.vinyl-spin:hover {
+  animation-duration: 1s;
 }
